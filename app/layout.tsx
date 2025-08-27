@@ -6,46 +6,46 @@ import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: {
-    default: 'LiveKit Meet | Conference app build with LiveKit open source',
+    default: 'RTC Labs | Advanced WebRTC Conference Platform',
     template: '%s',
   },
   description:
-    'LiveKit is an open source WebRTC project that gives you everything needed to build scalable and real-time audio and/or video experiences in your applications.',
+    'RTC Labs is an advanced WebRTC platform that provides cutting-edge real-time communication solutions for modern applications.',
   twitter: {
-    creator: '@livekitted',
-    site: '@livekitted',
+    creator: '@rtclabs',
+    site: '@rtclabs',
     card: 'summary_large_image',
   },
   openGraph: {
-    url: 'https://meet.livekit.io',
+    url: 'https://rtclabs.io',
     images: [
       {
-        url: 'https://meet.livekit.io/images/livekit-meet-open-graph.png',
+        url: 'https://rtclabs.io/images/rtc-labs-open-graph.png',
         width: 2000,
         height: 1000,
         type: 'image/png',
       },
     ],
-    siteName: 'LiveKit Meet',
+    siteName: 'RTC Labs',
   },
   icons: {
     icon: {
       rel: 'icon',
-      url: '/favicon.ico',
+      url: '/images/rtc-labs-home.svg',
     },
     apple: [
       {
         rel: 'apple-touch-icon',
-        url: '/images/livekit-apple-touch.png',
+        url: '/images/rtc-labs-home.svg',
         sizes: '180x180',
       },
-      { rel: 'mask-icon', url: '/images/livekit-safari-pinned-tab.svg', color: '#070707' },
+      { rel: 'mask-icon', url: '/images/rtc-labs-home.svg', color: '#00d4ff' },
     ],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: '#070707',
+  themeColor: '#00d4ff',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

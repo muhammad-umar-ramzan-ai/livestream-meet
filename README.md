@@ -1,42 +1,31 @@
-<a href="https://livekit.io/">
-  <img src="./.github/assets/livekit-mark.png" alt="LiveKit logo" width="100" height="100">
+<a href="https://rtclabs.io/">
+<img src="./.github/assets/rtc-labs-mark.png" alt="RTC Labs logo" width="100" height="100">
 </a>
 
-# LiveKit Meet
+# RTC Labs
 
-<p>
-  <a href="https://meet.livekit.io"><strong>Try the demo</strong></a>
-  •
-  <a href="https://github.com/livekit/components-js">LiveKit Components</a>
-  •
-  <a href="https://docs.livekit.io/">LiveKit Docs</a>
-  •
-  <a href="https://livekit.io/cloud">LiveKit Cloud</a>
-  •
-  <a href="https://blog.livekit.io/">Blog</a>
-</p>
+<a href="https://rtclabs.io"><strong>Try the demo</strong></a>
 
-<br>
+<a href="https://github.com/rtclabs/platform">RTC Labs Core</a>
 
-LiveKit Meet is an open source video conferencing app built on [LiveKit Components](https://github.com/livekit/components-js), [LiveKit Cloud](https://cloud.livekit.io/), and Next.js. It's been completely redesigned from the ground up using our new components library.
+<a href="https://docs.rtclabs.io/">RTC Labs Docs</a>
 
-![LiveKit Meet screenshot](./.github/assets/livekit-meet.jpg)
+<a href="https://rtclabs.io/cloud">RTC Labs Cloud</a>
 
-## Tech Stack
+<a href="https://blog.rtclabs.io/">Blog</a>
 
-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## About
+
+RTC Labs is an advanced WebRTC platform built on cutting-edge technology and [RTC Labs Core](https://github.com/rtclabs/platform), [RTC Labs Cloud](https://cloud.rtclabs.io/), and Next.js. It's been completely redesigned from the ground up using our new components library.
+
+![RTC Labs screenshot](./.github/assets/rtc-labs.jpg)
+
+## Features
+
 - App is built with [@livekit/components-react](https://github.com/livekit/components-js/) library.
+- End-to-end encryption support
+- High-quality video and audio
+- Screen sharing
+- Chat functionality
 
-## Demo
-
-Give it a try at https://meet.livekit.io.
-
-## Dev Setup
-
-Steps to get a local dev setup up and running:
-
-1. Run `pnpm install` to install all dependencies.
-2. Copy `.env.example` in the project root and rename it to `.env.local`.
-3. Update the missing environment variables in the newly created `.env.local` file.
-4. Run `pnpm dev` to start the development server and visit [http://localhost:3000](http://localhost:3000) to see the result.
-5. Start development 🎉
+Give it a try at https://rtclabs.io.

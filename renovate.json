@@ -1,17 +1,11 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
   "packageRules": [
     {
-      "schedule": "before 6am on the first day of the month",
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "devDependencies (non-major)"
-    },
-    {
-      "matchSourceUrlPrefixes": ["https://github.com/livekit/"],
-      "rangeStrategy": "replace",
-      "groupName": "LiveKit dependencies (non-major)",
-      "automerge": true
+      "matchSourceUrlPrefixes": ["https://github.com/rtclabs/"],
+      "groupName": "RTC Labs dependencies (non-major)",
+      "groupSlug": "rtc-labs-deps"
     }
   ]
 }

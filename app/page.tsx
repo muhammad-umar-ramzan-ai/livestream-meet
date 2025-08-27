@@ -54,12 +54,23 @@ function DemoMeetingTab(props: { label: string }) {
   };
   return (
     <div className={styles.tabContent}>
-      <p style={{ margin: 0 }}>Try LiveKit Meet for free with our live demo project.</p>
+      <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+        <img 
+          src="/images/rtc-labs-home.svg" 
+          alt="RTC Labs" 
+          width="120" 
+          height="15" 
+          style={{ marginBottom: '0.5rem' }}
+        />
+        <p style={{ margin: 0, fontSize: '1.1rem', fontWeight: '500' }}>
+          Experience RTC Labs advanced WebRTC platform with our live demo.
+        </p>
+      </div>
       <button style={{ marginTop: '1rem' }} className="lk-button" onClick={startMeeting}>
         Start Meeting
       </button>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center' }}>
           <input
             id="use-e2ee"
             type="checkbox"
@@ -69,7 +80,7 @@ function DemoMeetingTab(props: { label: string }) {
           <label htmlFor="use-e2ee">Enable end-to-end encryption</label>
         </div>
         {e2ee && (
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center' }}>
             <label htmlFor="passphrase">Passphrase</label>
             <input
               id="passphrase"
@@ -105,14 +116,23 @@ function CustomConnectionTab(props: { label: string }) {
   };
   return (
     <form className={styles.tabContent} onSubmit={onSubmit}>
-      <p style={{ marginTop: 0 }}>
-        Connect LiveKit Meet with a custom server using LiveKit Cloud or LiveKit Server.
-      </p>
+      <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+        <img 
+          src="/images/rtc-labs-home.svg" 
+          alt="RTC Labs" 
+          width="120" 
+          height="15" 
+          style={{ marginBottom: '0.5rem' }}
+        />
+        <p style={{ margin: 0, fontSize: '1.1rem', fontWeight: '500' }}>
+          Connect RTC Labs with a custom server using our advanced WebRTC infrastructure.
+        </p>
+      </div>
       <input
         id="serverUrl"
         name="serverUrl"
         type="url"
-        placeholder="LiveKit Server URL: wss://*.livekit.cloud"
+        placeholder="RTC Labs Server URL: wss://*.rtclabs.cloud"
         required
       />
       <textarea
@@ -124,7 +144,7 @@ function CustomConnectionTab(props: { label: string }) {
         style={{ padding: '1px 2px', fontSize: 'inherit', lineHeight: 'inherit' }}
       />
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center' }}>
           <input
             id="use-e2ee"
             type="checkbox"
@@ -134,7 +154,7 @@ function CustomConnectionTab(props: { label: string }) {
           <label htmlFor="use-e2ee">Enable end-to-end encryption</label>
         </div>
         {e2ee && (
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center' }}>
             <label htmlFor="passphrase">Passphrase</label>
             <input
               id="passphrase"
@@ -164,38 +184,36 @@ export default function Page() {
   return (
     <>
       <main className={styles.main} data-lk-theme="default">
-        <div className="header">
-          <img src="/images/livekit-meet-home.svg" alt="LiveKit Meet" width="360" height="45" />
-          <h2>
-            Open source video conferencing app built on{' '}
-            <a href="https://github.com/livekit/components-js?ref=meet" rel="noopener">
-              LiveKit&nbsp;Components
-            </a>
-            ,{' '}
-            <a href="https://livekit.io/cloud?ref=meet" rel="noopener">
-              LiveKit&nbsp;Cloud
-            </a>{' '}
-            and Next.js.
-          </h2>
+        <div className={styles.twoColumnLayout}>
+          {/* Left Column - Header and Logo */}
+          <div className={styles.leftColumn}>
+            <div className={styles.header}>
+              <img src="/images/rtc-labs-home.svg" alt="RTC Labs" width="360" height="45" />
+              <h2>
+                Advanced WebRTC platform built on cutting-edge technology and{' '}
+                <a href="https://github.com/rtclabs/platform?ref=rtclabs" rel="noopener">
+                  RTC&nbsp;Labs&nbsp;Core
+                </a>
+                ,{' '}
+                <a href="https://rtclabs.io/cloud?ref=rtclabs" rel="noopener">
+                  RTC&nbsp;Labs&nbsp;Cloud
+                </a>{' '}
+                and Next.js.
+              </h2>
+            </div>
+          </div>
+          
+          {/* Right Column - Form Tabs */}
+          <div className={styles.rightColumn}>
+            <Suspense fallback="Loading">
+              <Tabs>
+                <DemoMeetingTab label="Demo" />
+                <CustomConnectionTab label="Custom" />
+              </Tabs>
+            </Suspense>
+          </div>
         </div>
-        <Suspense fallback="Loading">
-          <Tabs>
-            <DemoMeetingTab label="Demo" />
-            <CustomConnectionTab label="Custom" />
-          </Tabs>
-        </Suspense>
       </main>
-      <footer data-lk-theme="default">
-        Hosted on{' '}
-        <a href="https://livekit.io/cloud?ref=meet" rel="noopener">
-          LiveKit Cloud
-        </a>
-        . Source code on{' '}
-        <a href="https://github.com/livekit/meet?ref=meet" rel="noopener">
-          GitHub
-        </a>
-        .
-      </footer>
     </>
   );
 }
